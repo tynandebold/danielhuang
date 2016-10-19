@@ -153,7 +153,7 @@ blockquote > span {
 }
 
 .bio-info {
-  max-width: 500px;
+  max-width: 600px;
   margin: 30px auto 0;
 }
 
@@ -161,6 +161,7 @@ blockquote > span {
   .bio-info {
     max-width: 350px;
     margin: 30px auto 0;
+    text-align: center;
   }
 }
 
@@ -183,4 +184,25 @@ blockquote > span {
 
 .bio-info a:hover {
   color: #9c9c9c;
+}
+
+.bio-info img {
+  float: right;
+  margin-left: 35px;
+  width: 40%;
+}
+
+@media (max-width:740px) {
+  .bio-info img {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 15px;
+    width: 80%;
+  }
+}
+
+@media (max-width:740px) {
+  .bio-info p {
+    text-align: left;
+  }
 }
