@@ -6,6 +6,13 @@ body {
   font-family: 'Cormorant Garamond', serif;
   margin: 0 auto;
   max-width: 1000px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.wf-active body,
+.wf-inactive body {
+  opacity: 1;
 }
 
 header {
@@ -92,7 +99,10 @@ section {
 .story-details {
   align-self: flex-start;
   box-shadow: inset -3px -3px 4px -2px rgba(204, 204, 204, 0.6);
-  height: 260px;
+  display: flex;
+  flex-direction: column;
+  height: 275px;
+  justify-content: flex-start;
   padding: 15px 15px 0;
   width: 100%;
 }
@@ -102,7 +112,6 @@ section {
   font-size: 20px;
   font-weight: 600;
   margin-top: 0;
-  margin-bottom: 10px;
   text-decoration: none;
   transition: color 0.2s ease-out;
 }
@@ -127,34 +136,22 @@ p {
   margin: 0 0 8px;
 }
 
+.pub-info {
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
 small {
   color: #b80404;
+  display: block;
   font-style: italic;
-}
-
-blockquote {
-  font-size: 40px;
-  margin: 35px 20px 0;
-}
-
-blockquote a {
-  color: #5f5f5f;
-  text-decoration: none;
-  transition: color 0.2s ease-out;
-}
-
-blockquote a:hover {
-  color: #9c9c9c;
-  cursor: pointer;
-}
-
-blockquote > span {
-  color: #b80404;
+  margin-bottom: 4px;
 }
 
 .bio-info {
   max-width: 500px;
   margin: 30px auto 0;
+  text-align: center;
 }
 
 @media (max-width:740px) {
@@ -174,7 +171,6 @@ blockquote > span {
 
 .bio-info p {
   color: #000;
-  text-align: right;
 }
 
 .bio-info  a {
@@ -188,9 +184,8 @@ blockquote > span {
 }
 
 .bio-info img {
-  float: right;
-  margin-left: 35px;
-  width: 31.25%;
+  margin: 25px 0;
+  max-width: 100%;
 }
 
 @media (max-width:740px) {
