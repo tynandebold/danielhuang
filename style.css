@@ -130,6 +130,12 @@ section {
   width: 100%;
 }
 
+@media (max-width:768px) {
+  .story-details {
+    height: auto;
+  }
+}
+
 .story-details > a {
   color: #000;
   font-size: 20px;
@@ -222,6 +228,8 @@ small {
 
 @media (max-width:740px) {
   .bio-info p {
-    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
 }
